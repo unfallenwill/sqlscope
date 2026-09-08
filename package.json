@@ -1,11 +1,12 @@
 {
   "name": "sqlscope",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SQLScope — MCP database query tool for AI agents (SQLite & MySQL)",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
     "start": "node dist/index.js",
     "smoke": "node scripts/smoke.mjs"
   },

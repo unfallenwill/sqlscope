@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // SQLScope — an MCP server that lets AI agents inspect and query databases.
 //
 // First release: SQLite (node:sqlite, zero deps) and MySQL / MariaDB (mysql2).
@@ -44,7 +45,7 @@ import { sqliteDriver } from './drivers/sqlite.js';
 import { mysqlDriver } from './drivers/mysql.js';
 import { buildServer } from './server.js';
 
-const SERVER_VERSION = '0.1.0';
+const SERVER_VERSION = '0.1.1';
 
 // ---------------------------------------------------------------------------
 // Configuration
