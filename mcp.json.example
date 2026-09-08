@@ -1,0 +1,50 @@
+{
+  "mcpServers": {
+    "sqlscope-sqlite": {
+      "command": "node",
+      "args": ["/path/to/sqlscope/dist/index.js", "--db", "sqlite:///path/to/app.db"]
+    },
+    "sqlscope-mysql": {
+      "command": "node",
+      "args": [
+        "/path/to/sqlscope/dist/index.js",
+        "--db",
+        "mysql://user:pass@127.0.0.1:3306/shop"
+      ]
+    },
+    "sqlscope-readonly": {
+      "command": "node",
+      "args": [
+        "/path/to/sqlscope/dist/index.js",
+        "--db",
+        "sqlite:///path/to/app.db?mode=ro",
+        "--max-rows",
+        "100"
+      ]
+    },
+    "sqlscope-multi": {
+      "command": "node",
+      "args": [
+        "/path/to/sqlscope/dist/index.js",
+        "--db", "oltp=mysql://user:pass@10.0.0.5:3306/shop",
+        "--db", "cache=sqlite:////var/cache/queue.db"
+      ]
+    },
+    "sqlscope-http": {
+      "type": "http",
+      "url": "http://127.0.0.1:3000/mcp",
+      "headers": {
+        "Authorization": "Bearer dev-secret"
+      }
+    },
+    "sqlscope-docker": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm",
+        "-e", "SQLSCOPE_DSN=sqlite:////data/app.db",
+        "-v", "sqlscope-data:/data",
+        "sqlscope:latest"
+      ]
+    }
+  }
+}

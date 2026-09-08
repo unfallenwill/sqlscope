@@ -1,0 +1,39 @@
+{
+  "name": "sqlscope",
+  "version": "0.1.0",
+  "description": "SQLScope — MCP database query tool for AI agents (SQLite & MySQL)",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "database",
+    "sql",
+    "sqlite",
+    "mysql"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "sqlscope": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "^2.0.0",
+    "@modelcontextprotocol/server": "^2.0.0",
+    "mysql2": "^3.15.3",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "typescript": "^7.0.2"
+  }
+}
